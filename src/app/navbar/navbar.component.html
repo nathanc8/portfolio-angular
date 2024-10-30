@@ -1,12 +1,20 @@
 <div class="">
   <nav class="bg-red-900">
     <div class="flex justify-between">
-      <a href="" class="p-8">Nathan CAZARD</a>
+      <a routerLink="" class="p-8">Nathan CAZARD</a>
       <ul class="flex">
-        <li class="p-8">Home</li>
-        <li class="p-8">About</li>
-        <li class="p-8">Projects</li>
-        <li class="p-8">Contact</li>
+        <li class="p-8">
+          <a routerLink="/home" routerLinkActive="">Home</a>
+        </li>
+        <li class="p-8">
+          <a routerLink="/about" routerLinkActive="">About me</a>
+        </li>
+        <li class="p-8">
+          <a routerLink="/portfolio" routerLinkActive="">My projects</a>
+        </li>
+        <li class="p-8">
+          <a routerLink="/contact" routerLinkActive="">Contact</a>
+        </li>
       </ul>
     </div>
   </nav>
