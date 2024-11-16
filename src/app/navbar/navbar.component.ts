@@ -3,12 +3,6 @@
 //HTML :
 //RouterLinksActive
 
-//TS :
-
-//CSS :
-//Design des "boutons" : hover, couleurs
-//Design de la navbar : couleur
-
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';

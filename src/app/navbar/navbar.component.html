@@ -1,21 +1,53 @@
 <div class="w-full">
-  <nav class="bg-red-900">
-    <div class="flex justify-between">
-      <a routerLink="" class="p-8">NCZ</a>
-      <ul class="flex">
-        <li class="p-8">
-          <a routerLink="/home" routerLinkActive="">Home</a>
-        </li>
-        <li class="p-8">
-          <a routerLink="/about" routerLinkActive="">About me</a>
-        </li>
-        <li class="p-8">
-          <a routerLink="/portfolio" routerLinkActive="">My projects</a>
-        </li>
-        <li class="p-8">
-          <a routerLink="/contact" routerLinkActive="">Contact</a>
-        </li>
-      </ul>
+  <nav class="bg-zinc-700">
+    <div class="grid grid-cols-4 items-center text-center">
+      <a routerLink="" class="p-8 text-slate-300">NCZ</a>
+      <div class="col-start-3 col-span-2 flex items-center justify-center">
+        <ul class="flex">
+          <li class="p-8 group">
+            <a
+              routerLink="/home"
+              routerLinkActive=""
+              class="relative text-slate-300 no-underline group-hover:text-gray-100 transition-all duration-300"
+            >
+              Home
+              <span
+                class="absolute bottom-[-6px] left-[-2px] w-0 h-[2px] bg-merlot-600 transition-all duration-300 group-hover:w-[115%]"
+              ></span
+            ></a>
+          </li>
+          <li class="p-8 group">
+            <a
+              routerLink="/about"
+              routerLinkActive=""
+              class="relative text-slate-300 no-underline group-hover:text-gray-100 transition-all duration-300"
+              >About me<span
+                class="absolute bottom-[-6px] left-[-2px] w-0 h-[2px] bg-merlot-600 transition-all duration-300 group-hover:w-[110%]"
+              ></span
+            ></a>
+          </li>
+          <li class="p-8 group">
+            <a
+              routerLink="/portfolio"
+              routerLinkActive=""
+              class="relative text-slate-300 no-underline group-hover:text-gray-100 transition-all duration-300"
+              >My projects<span
+                class="absolute bottom-[-6px] left-[-2px] w-0 h-[2px] bg-merlot-600 transition-all duration-300 group-hover:w-[110%]"
+              ></span
+            ></a>
+          </li>
+          <li class="p-8 group">
+            <a
+              routerLink="/contact"
+              routerLinkActive=""
+              class="relative text-slate-300 no-underline group-hover:text-gray-100 transition-all duration-300"
+              >Contact<span
+                class="absolute bottom-[-6px] left-[-2px] w-0 h-[2px] bg-merlot-600 transition-all duration-300 group-hover:w-[110%]"
+              ></span
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
