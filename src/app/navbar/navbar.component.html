@@ -1,12 +1,18 @@
 <div class="w-full">
   <nav class="bg-zinc-700">
-    <div
-      class="lg:grid grid-cols-4 items-center text-center md:flex justify-between"
-    >
-      <a routerLink="" class="p-8 text-slate-300">NCZ</a>
-      <div class="col-start-3 col-span-2 flex items-center justify-center">
-        <ul class="flex">
-          <li class="p-8 group">
+    <div class="grid grid-cols-5 items-center text-center">
+      <img
+        src="assets/my-pic.jpeg"
+        alt="Photo du concepteur et développeur de ce site, Nathan CAZARD"
+        class="rounded-full w-20 m-4 sm:hidden"
+      />
+      <a routerLink="" class="hidden p-8 text-slate-300 sm:inline">NCZ</a>
+
+      <div class="col-start-2 col-span-4">
+        <ul
+          class="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-none"
+        >
+          <li class="group p-2 flex justify-center items-center">
             <a
               routerLink="/home"
               routerLinkActive=""
@@ -18,7 +24,7 @@
               ></span
             ></a>
           </li>
-          <li class="p-8 group">
+          <li class="group p-2 flex justify-center items-center">
             <a
               routerLink="/about"
               routerLinkActive=""
@@ -28,7 +34,7 @@
               ></span
             ></a>
           </li>
-          <li class="p-8 group">
+          <li class="group p-2 flex justify-center items-center">
             <a
               routerLink="/portfolio"
               routerLinkActive=""
@@ -38,7 +44,7 @@
               ></span
             ></a>
           </li>
-          <li class="p-8 group">
+          <li class="group p-2 flex justify-center items-center">
             <a
               routerLink="/contact"
               routerLinkActive=""
