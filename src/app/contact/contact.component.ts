@@ -27,8 +27,6 @@ export class ContactComponent {
   http = inject(HttpClient);
 
   send() {
-    console.log(this.form);
-
     this.http
       .post(
         'https://api.emailjs.com/api/v1.0/email/send',
@@ -44,6 +42,7 @@ export class ContactComponent {
         }
       )
       .subscribe(() => {
+        //Ajouter une alerte à ce niveau là, ou une notification plutôt qu'un console.log
         console.log('Sent !');
       });
   }

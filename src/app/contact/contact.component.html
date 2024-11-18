@@ -1,7 +1,9 @@
 <div
   class="flex flex-col h-screen bg-zinc-800 justify-center items-center text-slate-100"
 >
-  <h1 class="text-4xl font-bold mb-20 -mt-12">Contact me!</h1>
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold">Contact me!</h1>
+  </div>
   <div class="bg-zinc-700 p-6 rounded-lg shadow-lg w-[60vw]">
     <div class="flex flex-col mb-4">
       <label for="name" class="mb-2 text-sm font-semibold">Full Name</label>
@@ -9,7 +11,7 @@
         type="text"
         id="name"
         [(ngModel)]="form.name"
-        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100 focus:outline-none focus:ring focus:ring-green-500"
+        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100 focus:outline-none focus:ring focus:ring-merlot-500"
       />
     </div>
     <div class="flex flex-col mb-4">
@@ -18,7 +20,7 @@
         type="email"
         id="email"
         [(ngModel)]="form.email"
-        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100focus:outline-none focus:ring focus:ring-green-500"
+        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100focus:outline-none focus:ring focus:ring-merlot-500"
       />
     </div>
     <div class="flex flex-col mb-4">
@@ -27,7 +29,7 @@
         type="phone"
         id="phone"
         [(ngModel)]="form.phone"
-        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100focus:outline-none focus:ring focus:ring-green-500"
+        class="p-2 rounded-md border border-gray-600 bg-zinc-800 text-slate-100focus:outline-none focus:ring focus:ring-merlot-500"
       />
     </div>
     <div class="flex flex-col mb-4">
@@ -37,7 +39,7 @@
       <textarea
         id="message"
         [(ngModel)]="form.message"
-        class="p-2 h-56 rounded-md border border-gray-600 bg-zinc-800 text-slate-100focus:outline-none focus:ring focus:ring-green-500"
+        class="p-2 min-h-32 h-56 max-h-60 rounded-md border border-gray-600 bg-zinc-800 text-slate-100 focus:outline-none focus:ring focus:ring-merlot-500"
       ></textarea>
     </div>
     <div class="flex justify-center">
