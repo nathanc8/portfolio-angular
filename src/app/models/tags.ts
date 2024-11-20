@@ -19,6 +19,7 @@ export class Tag {
   static readonly HIBERNATE = new Tag('Hibernate', '#5a7581');
   static readonly TAILWIND = new Tag('Tailwind', '#192129');
   static readonly LUA = new Tag('Lua', '#192129');
+  static readonly OOP = new Tag('OOP', '#192129');
 
   private constructor(
     private readonly key: string,
