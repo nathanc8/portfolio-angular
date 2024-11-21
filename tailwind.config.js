@@ -29,15 +29,6 @@ module.exports = {
           900: "#1f0f04",
         },
       },
-      keyframes: {
-        blind_caret: {
-          "0%, 100%": { borderColor: "transparent" },
-          "50%": { borderColor: "#00FF00" },
-        },
-      },
-      animation: {
-        blind_caret: "blind_caret 1s infinite",
-      },
     },
   },
   plugins: [],

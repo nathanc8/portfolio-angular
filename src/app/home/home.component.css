@@ -1,0 +1,17 @@
+#dynamicText {
+  border-right: 2px solid #cbd5e1;
+  padding-right: 5px;
+  animation: blink-caret 0.7s step-end infinite;
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #cbd5e1;
+  }
+}
