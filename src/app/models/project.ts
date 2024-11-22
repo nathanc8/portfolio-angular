@@ -2,10 +2,11 @@ import { Tag } from './tags';
 import { ProjectType } from './project-type.enum';
 
 export class Project {
-    id!: string;
+    id: string;
     images?: string[];
     description?: string[];
     developmentTime?: string;
+    numberOfPersons?: number;
 
     constructor(
         public name: string,
@@ -14,7 +15,7 @@ export class Project {
         public createdAt: Date,
         public githubUrl: string,
         public mainImageUrl: string,
-        public tags: Tag[]
+        public tags: Tag[],
     ) {
         this.id = crypto.randomUUID().substring(0, 8);
     }
@@ -55,6 +56,19 @@ export class Project {
 
     withImages(imagesUrls: string[]): Project {
         this.setImages(imagesUrls);
+        return this;
+    }
+
+    getNumberOfPersons(): number | undefined {
+        return this.numberOfPersons;
+    }
+
+    setNumberOfPersons(numberOfPersons: number) {
+        this.numberOfPersons = numberOfPersons;
+    }
+
+    withNumberOfPersons(numberOfPersons: number): Project {
+        this.setNumberOfPersons(numberOfPersons);
         return this;
     }
 }
