@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { Project } from '../models/project';
-import { Tag } from '../models/tags';
-import { ProjectType } from '../models/project-type.enum';
+import { ProjectService } from '../services/projects.service';
+import { ProjectCardComponent } from '../project-card/project-card.component';
 
 @Component({
     selector: 'app-portfolio',
     standalone: true,
-    imports: [],
+    imports: [ProjectCardComponent],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.css',
 })
-export class PortfolioComponent {}
+export class PortfolioComponent implements OnInit {
+    projects!: Project[];
+
+    constructor(private projectsServices: ProjectService) {}
+
+    ngOnInit(): void {
+        this.projects = this.projectsServices.getProjects();
+    }
+}

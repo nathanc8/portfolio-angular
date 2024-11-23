@@ -6,7 +6,7 @@ export class Project {
     images?: string[];
     description?: string[];
     developmentTime?: string;
-    numberOfPersons?: number;
+    teamSize?: string;
 
     constructor(
         public name: string,
@@ -15,6 +15,7 @@ export class Project {
         public createdAt: Date,
         public githubUrl: string,
         public mainImageUrl: string,
+        public imageAlt: string,
         public tags: Tag[],
     ) {
         this.id = crypto.randomUUID().substring(0, 8);
@@ -59,16 +60,16 @@ export class Project {
         return this;
     }
 
-    getNumberOfPersons(): number | undefined {
-        return this.numberOfPersons;
+    getTeamSize(): string | undefined {
+        return this.teamSize;
     }
 
-    setNumberOfPersons(numberOfPersons: number) {
-        this.numberOfPersons = numberOfPersons;
+    setTeamSize(teamSize: string) {
+        this.teamSize = teamSize;
     }
 
-    withNumberOfPersons(numberOfPersons: number): Project {
-        this.setNumberOfPersons(numberOfPersons);
+    withTeamSize(teamSize: string): Project {
+        this.setTeamSize(teamSize);
         return this;
     }
 }

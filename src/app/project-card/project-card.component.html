@@ -1,6 +1,9 @@
-<div>
-  <div>Nom</div>
-  <div>Image</div>
-  <div>Sommaire</div>
-  <div>Tags</div>
+<div (click)="viewProject()">
+    <div>{{ project.name | uppercase }}</div>
+    <img [src]="project.mainImageUrl" [alt]="project.imageAlt" />
+    <span>
+        @for (paragraphs of project.description; track project.id) {
+            <p>{{ paragraphs }}</p>
+        }
+    </span>
 </div>
