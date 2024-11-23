@@ -1,47 +1,32 @@
-<div class="h-[90vh] min-h-min bg-gray-950 lg:grid lg:grid-cols-2 pb-2">
-  <div
-    class="flex text-slate-300 text-[42px] leading-none text-center justify-center items-center row-span-2 lg:text-7xl"
-  >
-    <div class="w-[80vw] lg:w-[40vw]">
-      Welcome to my portfolio, I'm <br />
-      <span class="text-red-700">Nathan CAZARD, </span><br />
-      <span
-        >&zwnj;<span id="dynamicText">{{ dynamicText | titlecase }}</span></span
-      >
-    </div>
-  </div>
-  <div class="flex items-center justify-center">
-    <app-linktree class="w-[75%] h-auto m-4" />
-  </div>
-  <div
-    class="flex flex-col text-center items-center m-4 col-span-4 lg:grid lg:grid-cols-6"
-  >
-    <a
-      routerLink="/portfolio"
-      class="hidden lg:inline col-start-2 text-merlot-500 hover:text-slate-300 border border-merlot-700 hover:bg-merlot-700 focus:ring-4 font-bold rounded-lg text-xl p-2.5 text-center mt-4 w-[70vw] lg:w-52 hover:scale-105 ease-out duration-200"
+<div class="h-[90vh] min-h-min bg-gray-950 lg:grid lg:grid-cols-2 lg:grid-rows-2 pb-2">
+    <div
+        class="flex flex-col text-slate-300 text-[42px] leading-none text-center justify-evenly items-center row-span-2 lg:text-7xl"
     >
-      >Check my projects!
-    </a>
-    <div class="col-start-4 col-span-3">
-      <div class="text-slate-300 text-4xl p-2">
-        I am dedicated to crafting innovative and <br class="hidden" />impactful
-        solutions through my work.
-      </div>
-      <div class="text-slate-300 text-4xl p-2">
-        Here, you will find an overview of my projects, skills,
-        <br class="hidden" />and ongoing journey in the field of development.
-      </div>
-      <div class="text-slate-300 text-4xl p-2">
-        Thank you for visiting, I invite you to explore further.
-      </div>
+        <div class="w-[80vw] lg:w-[40vw]">
+            Welcome to my portfolio, I'm <br />
+            <span class="text-red-700">Nathan CAZARD, </span><br />
+            <span
+                >&zwnj;<span id="dynamicText">{{ dynamicText | titlecase }}</span></span
+            >
+        </div>
+        <a
+            routerLink="/portfolio"
+            class="hidden lg:inline col-start-2 text-merlot-500 hover:text-slate-300 border border-merlot-700 hover:bg-merlot-700 focus:ring-4 font-bold rounded-lg text-xl p-2.5 text-center mt-4 w-[70vw] lg:w-52 hover:scale-105 ease-out duration-200"
+        >
+            >Check my projects!
+        </a>
     </div>
-    <a
-      routerLink="/portfolio"
-      class="lg:hidden col-start-2 text-merlot-500 hover:text-slate-300 border border-merlot-700 hover:bg-merlot-700 focus:ring-4 font-bold rounded-lg text-xl p-2.5 text-center mt-4 w-[70vw] lg:w-52 hover:scale-105 ease-out duration-200"
-    >
-      >Check my projects!
-    </a>
-  </div>
+    <div class="flex items-center justify-center lg:row-span-2">
+        <app-linktree class="w-[75%] h-auto m-4" />
+    </div>
+    <div class="flex flex-col text-center items-center m-4 col-span-4 lg:grid lg:grid-cols-6">
+        <a
+            routerLink="/portfolio"
+            class="lg:hidden col-start-2 text-merlot-500 hover:text-slate-300 border border-merlot-700 hover:bg-merlot-700 focus:ring-4 font-bold rounded-lg text-xl p-2.5 text-center mt-4 w-[70vw] lg:w-52 hover:scale-105 ease-out duration-200"
+        >
+            >Check my projects!
+        </a>
+    </div>
 </div>
 
 <!-- I am an aspiring developer / backend enthusiast / future full-stack programmer /
