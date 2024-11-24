@@ -1,12 +1,13 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Project } from '../models/project';
 import { ProjectService } from '../services/projects.service';
 import { ProjectCardComponent } from '../project-card/project-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-portfolio',
     standalone: true,
-    imports: [ProjectCardComponent],
+    imports: [ProjectCardComponent, CommonModule],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.css',
 })

@@ -9,16 +9,16 @@ import { Tag } from '../models/tags';
 export class ProjectService {
     private projects: Project[] = [
         new Project(
-            'Poker - Object-Oriented Programming',
+            'Poker',
             ProjectType['solo project'],
-            "Implementation of the Texas Hold'em Poker game logic in OOP with Java",
+            "Implementation of the Texas Hold'em Poker game logic in Object-Oriented Programming with Java",
             new Date('2024-10'),
             'https://github.com/nathanc8/poker_OOP',
-            '../../public/assets/poker-1.png',
+            './assets/poker-1.png',
             `Picture of my IDE opened on my Poker project`,
             [(Tag.OOP, Tag.JAVA)],
         )
-            .withDevelopmentTime('Approximately one day.')
+            .withDevelopmentTime('Approximately one day')
             .withDescription([
                 "At first, this project was an exercise assigned at Ada Tech School, in vanilla Javascript : we had to code the algorithm behind the Texas Hold'em Poker game. I decided to try and code it in Java, as I want to specialize in this language.",
                 'I want to implement logics of differents cards games, such as Omaha poker, 5-card-draw, or blackjack.',
@@ -30,7 +30,7 @@ export class ProjectService {
             'Full stack project, e-commerce platform to sell furnitures.',
             new Date('2024-11'),
             'https://github.com/nathanc8/ikeah',
-            '../../public/assets/ikeah-1.png',
+            './assets/ikeah-1.png',
             'Picture of our site landing page',
             [
                 Tag.ANGULAR,
@@ -79,16 +79,9 @@ export class ProjectService {
             'Chrome extension that replaces the home page',
             new Date('2024-09'),
             'https://github.com/nathanc8/focuspage',
-            '../../public/assets/focuspage-1.png',
+            './assets/focuspage-1.png',
             'Picture of a new tab affected by our extension, presenting a weather widget, a to-do list, a calendar, and a Google search bar',
-            [
-                Tag.CSS,
-                Tag.HTML5,
-                Tag.JAVASCRIPT,
-                Tag.TYPESCRIPT,
-                Tag.RESTAPI,
-                Tag.OOP,
-            ],
+            [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.RESTAPI, Tag.OOP],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -105,7 +98,7 @@ export class ProjectService {
             'Data visualization representing filming locations in Paris since 2016, using a public API from opendata',
             new Date('2024-07'),
             'https://github.com/nathanc8/dataviz_project_tournages_paris',
-            '../../public/assets/dataviz-1.png',
+            './assets/dataviz-1.png',
             "Picture of our project, presenting the filmings locations in Paris of the movie 'L'attaché'",
             [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.RESTAPI],
         )
@@ -124,7 +117,7 @@ export class ProjectService {
             'Chat-Grin is a video game, developped on Pico-8 during our first month in AdaTechSchool',
             new Date('2024-06'),
             'https://www.lexaloffle.com/bbs/?tid=142791',
-            '../../public/assets/chat-grain-1.png',
+            './assets/chat-grain-1.png',
             'Screenshot of our game menu',
             [Tag.LUA],
         )
@@ -143,9 +136,7 @@ export class ProjectService {
     }
 
     getProjectById(projectId: string): Project {
-        const foundProject = this.projects.find(
-            (Project) => Project.id === projectId,
-        );
+        const foundProject = this.projects.find((Project) => Project.id === projectId);
         if (!foundProject) {
             throw new Error('Project not found!');
         }
