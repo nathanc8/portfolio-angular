@@ -81,7 +81,14 @@ export class ProjectService {
             'https://github.com/nathanc8/focuspage',
             './assets/focuspage-1.png',
             'Picture of a new tab affected by our extension, presenting a weather widget, a to-do list, a calendar, and a Google search bar',
-            [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.RESTAPI, Tag.OOP],
+            [
+                Tag.CSS,
+                Tag.HTML5,
+                Tag.JAVASCRIPT,
+                Tag.TYPESCRIPT,
+                Tag.RESTAPI,
+                Tag.OOP,
+            ],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -136,8 +143,11 @@ export class ProjectService {
     }
 
     getProjectById(projectId: string): Project {
-        const foundProject = this.projects.find((Project) => Project.id === projectId);
-        if (!foundProject) {
+        const foundProject = this.projects.find(
+            (Project) => Project.id === projectId,
+        );
+        console.log(foundProject);
+        if (foundProject == null) {
             throw new Error('Project not found!');
         }
         return foundProject;
