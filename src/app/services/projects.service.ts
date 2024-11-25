@@ -20,7 +20,7 @@ export class ProjectService {
         )
             .withDevelopmentTime('Approximately one day')
             .withDescription([
-                "At first, this project was an exercise assigned at Ada Tech School, in vanilla Javascript : we had to code the algorithm behind the Texas Hold'em Poker game. I decided to try and code it in Java, as I want to specialize in this language.",
+                "At first, this project was an exercise assigned at Ada Tech School, in vanilla Javascript : we had to code the algorithm behind the Texas Hold'em Poker game. I decided to try and code it in Java, in a Object-Oriented Programming logic, as I want to specialize in this language.",
                 'I want to implement logics of differents cards games, such as Omaha poker, 5-card-draw, or blackjack.',
             ]),
 
