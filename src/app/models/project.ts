@@ -7,7 +7,8 @@ export class Project {
     description?: string[];
     developmentTime?: string;
     teamSize?: string;
-    creationDate: string;
+    creationMonth?: string;
+    creationYear?: string;
 
     constructor(
         public name: string,
@@ -20,7 +21,8 @@ export class Project {
         public tags: Tag[],
     ) {
         this.id = crypto.randomUUID().substring(0, 8);
-        this.creationDate = `${createdAt.toLocaleString('en-gb', { month: 'long' })} ${createdAt.getFullYear()}`;
+        this.creationMonth = `${createdAt.toLocaleString('en-gb', { month: 'long' })}`;
+        this.creationYear = `${createdAt.getFullYear()}`;
     }
 
     getDevelopmentTime(): string | undefined {
