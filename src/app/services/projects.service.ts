@@ -10,11 +10,11 @@ export class ProjectService {
     private projects: Project[] = [
         new Project(
             'Poker',
-            ProjectType['solo project'],
+            ProjectType['solo'],
             "Implementation of the Texas Hold'em Poker game logic in Object-Oriented Programming with Java",
             new Date('2024-10'),
             'https://github.com/nathanc8/poker_OOP',
-            './assets/poker-1.png',
+            './assets/projects/poker-1.png',
             `Picture of my IDE opened on my Poker project`,
             [(Tag.OOP, Tag.JAVA)],
         )
@@ -26,11 +26,11 @@ export class ProjectService {
 
         new Project(
             'Ike-AH',
-            ProjectType['group project'],
+            ProjectType['group'],
             'Full stack project, e-commerce platform to sell furnitures.',
             new Date('2024-11'),
             'https://github.com/nathanc8/ikeah',
-            './assets/ikeah-1.png',
+            './assets/projects/ikeah-1.png',
             'Picture of our site landing page',
             [
                 Tag.ANGULAR,
@@ -56,7 +56,7 @@ export class ProjectService {
 
         new Project(
             'Social Network',
-            ProjectType['group project'],
+            ProjectType['group'],
             'Social network programmed in PHP, starting with a code base that we had to clean before implementing anything',
             new Date('2024-10'),
             'https://github.com/adatechschool/projet-collectif-reseau-social-php-olnaye-long',
@@ -68,27 +68,20 @@ export class ProjectService {
             .withDescription([
                 'This project was about learning how to managing a database, and how to program server-side, and not client-side like we had previously done with Javascript. To complete this goal, we were given a PHP codebase that had some @Todo tasks to complete. In fine, another goal of this project was to learn another language, and to understand the code produced by another person.',
                 "We created a database from scratch purely in SQL, to save the posts and everything related such as likes, comments, and tags, as well as the users. We learned how to connect to a database, and how to interact with it, by adding SQL requests in our code. Of course, without users, a social network isn't social, so we implemented a registration and a login system with password hash and protection against SQL injections.",
-                '',
+
                 //@Todo finish the description of this project, for exemple with improvements points.
             ])
             .withTeamSize('3 persons'),
 
         new Project(
             'FocusPage',
-            ProjectType['group project'],
+            ProjectType['group'],
             'Chrome extension that replaces the home page',
             new Date('2024-09'),
             'https://github.com/nathanc8/focuspage',
-            './assets/focuspage-1.png',
+            './assets/projects/focuspage-1.png',
             'Picture of a new tab affected by our extension, presenting a weather widget, a to-do list, a calendar, and a Google search bar',
-            [
-                Tag.CSS,
-                Tag.HTML5,
-                Tag.JAVASCRIPT,
-                Tag.TYPESCRIPT,
-                Tag.RESTAPI,
-                Tag.OOP,
-            ],
+            [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.RESTAPI, Tag.OOP],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -101,11 +94,11 @@ export class ProjectService {
 
         new Project(
             'Dataviz',
-            ProjectType['group project'],
+            ProjectType['group'],
             'Data visualization representing filming locations in Paris since 2016, using a public API from opendata',
             new Date('2024-07'),
             'https://github.com/nathanc8/dataviz_project_tournages_paris',
-            './assets/dataviz-1.png',
+            './assets/projects/dataviz-1.png',
             "Picture of our project, presenting the filmings locations in Paris of the movie 'L'attaché'",
             [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.RESTAPI],
         )
@@ -120,11 +113,11 @@ export class ProjectService {
 
         new Project(
             'Chat-Grin',
-            ProjectType['group project'],
+            ProjectType['group'],
             'Chat-Grin is a video game, developped on Pico-8 during our first month in AdaTechSchool',
             new Date('2024-06'),
             'https://www.lexaloffle.com/bbs/?tid=142791',
-            './assets/chat-grain-1.png',
+            './assets/projects/chat-grain-1.png',
             'Screenshot of our game menu',
             [Tag.LUA],
         )
@@ -143,9 +136,7 @@ export class ProjectService {
     }
 
     getProjectById(projectId: string): Project {
-        const foundProject = this.projects.find(
-            (Project) => Project.id === projectId,
-        );
+        const foundProject = this.projects.find((Project) => Project.id === projectId);
         console.log(foundProject);
         if (foundProject == null) {
             throw new Error('Project not found!');

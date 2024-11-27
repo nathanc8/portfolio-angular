@@ -1,4 +1,5 @@
 export class Tag {
+    // @Todo modifier les tags et éventuellement changer intégralement cette classe pour ajouter des images
     static readonly ANGULAR = new Tag('Angular', '#5a7581');
     static readonly JAVA = new Tag('Java', '#5a7581');
     static readonly PHP = new Tag('PHP', '#5a7581');

@@ -1,4 +1,4 @@
 export enum ProjectType {
-  'group project',
-  'solo project',
+    group = 'Group project',
+    solo = 'Solo project',
 }

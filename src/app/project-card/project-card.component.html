@@ -1,14 +1,14 @@
 <div
     class="flex flex-col items-center text-center border-2 border-merlot-600 rounded-xl text-slate-300 w-[80%] p-6 hover:scale-105 duration-200"
 >
+    <!-- @Todo remove the (click) on this div -->
     <div
         class="relative w-full h-[40vh] rounded-xl overflow-hidden bg-cover bg-center"
         [style.backgroundImage]="'url(' + project.mainImageUrl + ')'"
         [title]="project.imageAlt"
+        (click)="viewProject()"
     >
-        <div
-            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center"
-        >
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
             <span
                 class="text-3xl font-bold text-slate-200 hover:cursor-pointer hover:scale-110 transition-transform duration-200"
                 (click)="viewProject()"
@@ -18,13 +18,9 @@
         </div>
     </div>
     <span class="w-[80%] mt-4">
-        <p class="p-2">{{ project.summary }}</p>
-
+        <p class="pb-2">{{ project.summary }}</p>
+        <p class="pb-2">{{ project.type }}, developed in {{ project.developmentTime | lowercase }}.</p>
         <!-- @Todo ajouter les tags à cet endroit -->
-
-        <p class="pb-2">
-            Developed in {{ project.developmentTime | lowercase }}.
-        </p>
     </span>
     <button
         (click)="viewProject()"
