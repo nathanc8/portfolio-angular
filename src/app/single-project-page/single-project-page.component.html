@@ -1,48 +1,52 @@
-<div
-    class="flex flex-col h-[90vh] bg-gray-950 items-center text-slate-300 px-8"
->
+<div class="flex flex-col min-h-[90vh] bg-gray-950 items-center text-slate-300 px-8">
     <div
         id="imageBg"
         class="relative w-full h-[50vh] bg-cover bg-center"
         [style.backgroundImage]="'url(' + project.mainImageUrl + ')'"
         [title]="project.imageAlt"
     >
-        <div
-            id="mainContainer"
-            class="absolute inset-0 bg-black bg-opacity-60 grid grid-cols-2 grid-rows-5 w-full"
-        >
-            <div
-                class="text-3xl font-bold text-slate-200 flex h-max-8 items-center justify-center col-span-2"
-            >
+        <div id="mainContainer" class="absolute inset-0 bg-black bg-opacity-60 grid grid-cols-2 grid-rows-5 w-full">
+            <div class="text-3xl font-bold text-slate-200 flex h-max-8 items-center justify-center col-span-2">
                 <div class="hover:scale-105 hover:cursor-pointer duration-200">
                     <a [href]="project.githubUrl" class="flex" target="_blank"
                         >{{ project.name | uppercase
-                        }}<img
-                            src="./assets/icons/github.png"
-                            class="w-8"
-                            alt="Github icon"
+                        }}<img src="./assets/icons/github.png" class="w-8" alt="Github icon"
                     /></a>
                 </div>
             </div>
             <!-- @todo ajouter le responsive de cette partie -->
             @if (project.type === ProjectType.solo) {
-                <div
-                    class="inset-0 bg-black bg-opacity-50 col-span-2 flex items-center text-center py-8 px-4 border-merlot-600 border-2 rounded-xl mx-auto w-fit h-auto"
-                >
-                    <div class="">
+                <div class="col-span-2">
+                    <div
+                        class="inset-0 bg-black bg-opacity-50 items-center text-center py-2 px-4 border-merlot-600 border-2 rounded-xl mx-auto h-auto max-w-[19rem]"
+                    >
                         <p>
-                            {{ project.type }}, developped in
-                            {{ project.creationMonth }} <br />
+                            {{ project.type }}, developped in {{ project.creationMonth }} <br />
                             {{ project.creationYear }} in
                             {{ project.developmentTime | lowercase }}
                         </p>
                     </div>
                 </div>
+            } @else {
+                <div class="col-span-2">
+                    <div
+                        class="inset-0 bg-black bg-opacity-50 items-center text-center py-2 px-4 border-merlot-600 border-2 rounded-xl mx-auto h-auto m-2 max-w-[19rem]"
+                    >
+                        <p>{{ project.type }}, developped by <br />{{ project.teamSize }}</p>
+                    </div>
+                    <div
+                        class="inset-0 bg-black bg-opacity-50 items-center text-center p-2 border-merlot-600 border-2 rounded-xl mx-auto h-auto m-2 max-w-[19rem]"
+                    >
+                        <p>
+                            Developped in {{ project.creationMonth }} {{ project.creationYear }} in <br />
+                            {{ project.developmentTime | lowercase }}
+                        </p>
+                    </div>
+                </div>
             }
-            <!-- @Todo ajouter le else -->
         </div>
+        <!-- @Todo ajouter les tags -->
     </div>
-    <!-- @Todo ajouter les tags -->
     <div class="text-lg font-bold text-slate-300">
         {{ project.description }}
     </div>
