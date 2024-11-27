@@ -7,10 +7,9 @@ import { ProjectType } from '../models/project-type.enum';
 
 @Component({
     selector: 'app-single-project-page',
-    standalone: true,
     imports: [UpperCasePipe, LowerCasePipe],
     templateUrl: './single-project-page.component.html',
-    styleUrl: './single-project-page.component.css',
+    styleUrl: './single-project-page.component.css'
 })
 export class SingleProjectPageComponent {
     @Input() projectPreview!: Project;

@@ -5,11 +5,10 @@ import { TitleCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [LinktreeComponent, TitleCasePipe, RouterLink],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+    selector: 'app-home',
+    imports: [LinktreeComponent, TitleCasePipe, RouterLink],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   dynamicText: string = '';

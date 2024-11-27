@@ -6,10 +6,9 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-portfolio',
-    standalone: true,
     imports: [ProjectCardComponent, CommonModule],
     templateUrl: './portfolio.component.html',
-    styleUrl: './portfolio.component.css',
+    styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent implements OnInit {
     projects!: Project[];
