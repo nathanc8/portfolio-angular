@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Title } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 interface ContactForm {
     name: string;
@@ -13,7 +13,7 @@ interface ContactForm {
 
 @Component({
     selector: 'app-contact',
-    imports: [FormsModule, ReactiveFormsModule],
+    imports: [FormsModule, ReactiveFormsModule, CommonModule],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.css',
 })
@@ -22,22 +22,34 @@ export class ContactComponent implements OnInit {
     submitStatus: 'success' | 'error' | null = null;
     statusMessage: string = '';
 
-    constructor(private formBuilder: FormBuilder) {
+    constructor(
+        private formBuilder: FormBuilder,
+        private title: Title,
+    ) {
+        this.title.setTitle('NCZ | Contact');
         this.form = this.formBuilder.group({
             name: ['', Validators.required],
-            email: ['', Validators.required, Validators.email],
-            phone: ['', Validators.pattern('^[- +()0-9]+$')],
+            email: [
+                '',
+                [
+                    Validators.required,
+                    Validators.email,
+                    Validators.pattern('^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,})$'),
+                ],
+            ],
+            phone: ['', Validators.pattern('^(?:(?:\\+|00)33|0)\\s*[1-9](?:[\\s.-]*\\d{2}){4}$')],
             message: ['', Validators.required],
         });
     }
 
     ngOnInit() {}
 
+    //
     public sendEmail() {
         if (this.form.valid) {
-            const serviceID = 'service_g49j9h6';
-            const templateID = 'template_r676l4g';
-            const userID = 'KBXbTTF11_u7Vgg5b';
+            const serviceID = 'service_fok4lio';
+            const templateID = 'template_sfpc126';
+            const userID = 'nQzpLwYJzNxHi9Omw';
 
             emailjs
                 .send(
@@ -53,51 +65,25 @@ export class ContactComponent implements OnInit {
                 .then(
                     (result: EmailJSResponseStatus) => {
                         this.submitStatus = 'success';
-                        this.statusMessage = 'Votre message a été envoyé avec succès !';
+                        this.statusMessage = '\u{2705} Your message has been sent successfully!';
                         this.form.reset();
                     },
                     (error) => {
                         this.submitStatus = 'error';
                         this.statusMessage =
-                            "Une erreur s'est produite. Veuillez réessayer ou choisir un autre moyen de contact.";
+                            '\u{274C} An error occurred. Please try again or choose another contact method.';
                     },
                 );
         }
     }
 
-    // constructor(private title: Title) {
-    //     this.title.setTitle('NCZ | Contact');
-    // }
+    isFieldInvalid(field: string): boolean | undefined {
+        const control = this.form.get(field);
+        return control?.invalid && (control?.touched || control?.dirty);
+    }
 
-    // form: ContactForm = {
-    //     name: '',
-    //     email: '',
-    //     phone: '',
-    //     message: '',
-    // };
-
-    // http = inject(HttpClient);
-
-    // //@Todo Sortir les identifiants dans un autre fichier
-
-    // send() {
-    //     this.http
-    //         .post(
-    //             'https://api.emailjs.com/api/v1.0/email/send',
-    //             {
-    //                 lib_version: '4.4.1',
-    //                 service_id: 'service_fok4lio',
-    //                 template_id: 'template_sfpc126',
-    //                 template_params: this.form,
-    //                 user_id: 'nQzpLwYJzNxHi9Omw',
-    //             },
-    //             {
-    //                 responseType: 'text',
-    //             },
-    //         )
-    //         .subscribe(() => {
-    //             //@Todo Ajouter une alerte à ce niveau là, ou une notification plutôt qu'un console.log
-    //             console.log('Sent !');
-    //         });
-    // }
+    isPhoneInvalid(field: string): boolean | undefined {
+        const control = this.form.get(field);
+        return control?.invalid && control?.dirty;
+    }
 }

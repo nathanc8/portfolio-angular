@@ -9,44 +9,60 @@
                 <input
                     type="text"
                     id="name"
-                    [(ngModel)]="form.name"
-                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-500"
+                    formControlName="name"
+                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
+                <div *ngIf="isFieldInvalid('name')" class="h-2 mb-5 relative left-2">
+                    <small class="text-xs relative top-0 left-0 text-merlot-500">Name is required</small>
+                </div>
             </div>
             <div class="flex flex-col mb-4">
                 <label for="email" class="mb-2 text-sm font-semibold">Email *</label>
                 <input
                     type="email"
                     id="email"
-                    [(ngModel)]="form.email"
-                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-500"
+                    formControlName="email"
+                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
+                <div *ngIf="isFieldInvalid('email')" class="h-2 mb-5 relative left-2">
+                    <small class="text-xs relative top-0 left-0 text-merlot-500">Please enter a valid email</small>
+                </div>
             </div>
             <div class="flex flex-col mb-4">
                 <label for="phone" class="mb-2 text-sm font-semibold">Phone Number</label>
                 <input
-                    type="phone"
+                    type="text"
                     id="phone"
-                    [(ngModel)]="form.phone"
-                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-500"
+                    formControlName="phone"
+                    class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
+                <div *ngIf="isPhoneInvalid('phone')" class="h-2 mb-5 relative left-2">
+                    <small class="text-xs relative top-0 left-0 text-merlot-500"
+                        >Please enter a valid phone number</small
+                    >
+                </div>
             </div>
             <div class="flex flex-col mb-4">
                 <label for="message" class="mb-2 text-sm font-semibold">Your message *</label>
                 <textarea
                     id="message"
-                    [(ngModel)]="form.message"
-                    class="p-2 min-h-32 h-[20vh] max-h-96 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-500"
+                    formControlName="message"
+                    class="p-2 min-h-32 h-[20vh] max-h-96 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 ></textarea>
+                <div *ngIf="isFieldInvalid('message')" class="h-2 mb-5 relative left-2">
+                    <small class="text-xs relative top-0 left-0 text-merlot-500">Message is required</small>
+                </div>
             </div>
             <div class="flex justify-center">
                 <button
-                    (click)="send()"
+                    type="submit"
+                    [disabled]="form.invalid"
                     class="w-[55vw] py-2 px-4 bg-merlot-600 text-slate-300 font-semibold rounded-md hover:bg-merlot-700 transition hover:scale-105"
                 >
                     Send
                 </button>
             </div>
+            <div class="text-slate-300 font-semibold text-center pt-4">{{ statusMessage }}</div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
