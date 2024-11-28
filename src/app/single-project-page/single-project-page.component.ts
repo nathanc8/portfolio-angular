@@ -5,7 +5,6 @@ import { ProjectService } from '../services/projects.service';
 import { LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { ProjectType } from '../models/project-type.enum';
 import { Title } from '@angular/platform-browser';
-import { throwError } from 'rxjs';
 
 @Component({
     selector: 'app-single-project-page',
