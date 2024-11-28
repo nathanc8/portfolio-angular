@@ -4,8 +4,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
     selector: 'app-about',
-    imports: [FooterComponent, NavbarComponent],
+    imports: [],
     templateUrl: './about.component.html',
-    styleUrl: './about.component.css'
+    styleUrl: './about.component.css',
 })
 export class AboutComponent {}

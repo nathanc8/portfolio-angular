@@ -16,7 +16,7 @@ export class ProjectService {
             'https://github.com/nathanc8/poker_OOP',
             './assets/projects/poker-1.png',
             `Picture of my IDE opened on my Poker project`,
-            [(Tag.OOP, Tag.JAVA)],
+            [Tag.JAVA, Tag.OOP],
         )
             .withDevelopmentTime('Approximately one day')
             .withDescription([
@@ -35,13 +35,13 @@ export class ProjectService {
             [
                 Tag.ANGULAR,
                 Tag.JAVA,
-                Tag.JPA,
-                Tag.SQL,
-                Tag.HIBERNATE,
-                Tag.OOP,
                 Tag.SPRINGBOOT,
-                Tag.RESTAPI,
                 Tag.TYPESCRIPT,
+                Tag.JPA,
+                Tag.OOP,
+                Tag.HIBERNATE,
+                Tag.RESTAPI,
+                Tag.SQL,
             ],
         )
             .withDevelopmentTime('Approximately 7 days')
@@ -62,7 +62,7 @@ export class ProjectService {
             'https://github.com/adatechschool/projet-collectif-reseau-social-php-olnaye-long',
             '',
             '',
-            [Tag.PHP, Tag.CSS, Tag.HTML5, Tag.SQL],
+            [Tag.PHP, Tag.SQL, Tag.CSS, Tag.HTML5],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -81,7 +81,7 @@ export class ProjectService {
             'https://github.com/nathanc8/focuspage',
             './assets/projects/focuspage-1.png',
             'Picture of a new tab affected by our extension, presenting a weather widget, a to-do list, a calendar, and a Google search bar',
-            [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.RESTAPI, Tag.OOP],
+            [Tag.TYPESCRIPT, Tag.JAVASCRIPT, Tag.RESTAPI, Tag.CSS, Tag.HTML5, Tag.OOP],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -100,14 +100,15 @@ export class ProjectService {
             'https://github.com/nathanc8/dataviz_project_tournages_paris',
             './assets/projects/dataviz-1.png',
             "Picture of our project, presenting the filmings locations in Paris of the movie 'L'attaché'",
-            [Tag.CSS, Tag.HTML5, Tag.JAVASCRIPT, Tag.RESTAPI],
+            [Tag.JAVASCRIPT, Tag.RESTAPI, Tag.CSS, Tag.HTML5],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
                 'This project was completed after two months into our formation. We implemented a data vizualisation of the filming locations in Paris since 2016, using a public API from opendata.paris.',
                 'The goal of this project was to get familiar with API and asynchrone concept.',
                 'We used Leaflet open-source library to have a map, and JavaScript to fetch the data from the API. This data was returned as a Json file, that we parsed with JavaScript.',
-                'Once we were done with the data visualization, we wanted to implement a drop-down list with auto completion. This was made at the end of the project and could use some improvements.', //@Todo Need to think about some exemples of improvements here.
+                'Once we were done with the data visualization, we wanted to implement a drop-down list with auto completion. This was made at the end of the project and could use some improvements.',
+                //@Todo Need to think about some exemples of improvements here.
             ])
             .withTeamSize('3 persons'),
 
