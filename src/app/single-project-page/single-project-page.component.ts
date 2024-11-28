@@ -4,12 +4,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectService } from '../services/projects.service';
 import { LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { ProjectType } from '../models/project-type.enum';
+import { Title } from '@angular/platform-browser';
+import { throwError } from 'rxjs';
 
 @Component({
     selector: 'app-single-project-page',
     imports: [UpperCasePipe, LowerCasePipe],
     templateUrl: './single-project-page.component.html',
-    styleUrl: './single-project-page.component.css'
+    styleUrl: './single-project-page.component.css',
 })
 export class SingleProjectPageComponent {
     @Input() projectPreview!: Project;
@@ -22,6 +24,7 @@ export class SingleProjectPageComponent {
         public route: ActivatedRoute,
         private projectsService: ProjectService,
         public router: Router,
+        private title: Title,
     ) {}
 
     ngOnInit(): void {
@@ -31,7 +34,11 @@ export class SingleProjectPageComponent {
     private getProject() {
         const projectId = this.route.snapshot.params['id'];
         this.project = this.projectsService.getProjectById(projectId);
-        console.log(this.project.type);
+        if (this.project && this.project.name) {
+            this.title.setTitle(`NCZ | ${this.project.name}`);
+        } else {
+            console.warn("Page title can't be set. Project is not totally defined");
+        }
     }
 
     onProjectsListClick() {

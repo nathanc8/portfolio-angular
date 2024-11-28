@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 interface ContactForm {
     name: string;
@@ -13,9 +14,13 @@ interface ContactForm {
     selector: 'app-contact',
     imports: [FormsModule],
     templateUrl: './contact.component.html',
-    styleUrl: './contact.component.css'
+    styleUrl: './contact.component.css',
 })
 export class ContactComponent {
+    constructor(private title: Title) {
+        this.title.setTitle('NCZ | Contact');
+    }
+
     form: ContactForm = {
         name: '',
         email: '',
