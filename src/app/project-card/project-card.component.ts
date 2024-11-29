@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
     selector: 'app-project-card',
     imports: [CommonModule],
     templateUrl: './project-card.component.html',
-    styleUrl: './project-card.component.css'
+    styleUrl: './project-card.component.css',
 })
 export class ProjectCardComponent {
     @Input() project!: Project;
@@ -16,5 +16,6 @@ export class ProjectCardComponent {
 
     viewProject() {
         this.router.navigateByUrl(`project/${this.project.id}`);
+        window.scrollTo(0, 0);
     }
 }

@@ -3,54 +3,82 @@
         <h1 class="text-4xl font-bold m-8 justify-center">Contact me!</h1>
     </div>
     <form [formGroup]="form" (ngSubmit)="sendEmail()">
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg w-[80vw] lg:w-[70vw]">
+        <div
+            class="bg-gray-700 p-6 rounded-lg shadow-lg w-[80vw] lg:w-[70vw] mb-4"
+        >
             <div class="flex flex-col mb-4">
-                <label for="name" class="mb-2 text-sm font-semibold">Full Name *</label>
+                <label for="name" class="mb-2 text-sm font-semibold"
+                    >Full Name *</label
+                >
                 <input
                     type="text"
                     id="name"
                     formControlName="name"
                     class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
-                <div *ngIf="isFieldInvalid('name')" class="h-2 mb-5 relative left-2">
-                    <small class="text-xs relative top-0 left-0 text-merlot-500">Name is required</small>
+                <div
+                    *ngIf="isFieldInvalid('name')"
+                    class="h-2 mb-5 relative left-2"
+                >
+                    <small class="text-xs relative top-0 left-0 text-merlot-500"
+                        >Name is required</small
+                    >
                 </div>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="email" class="mb-2 text-sm font-semibold">Email *</label>
+                <label for="email" class="mb-2 text-sm font-semibold"
+                    >Email *</label
+                >
                 <input
                     type="email"
                     id="email"
                     formControlName="email"
                     class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
-                <div *ngIf="isFieldInvalid('email')" class="h-2 mb-5 relative left-2">
-                    <small class="text-xs relative top-0 left-0 text-merlot-500">Please enter a valid email</small>
+                <div
+                    *ngIf="isFieldInvalid('email')"
+                    class="h-2 mb-5 relative left-2"
+                >
+                    <small class="text-xs relative top-0 left-0 text-merlot-500"
+                        >Please enter a valid email</small
+                    >
                 </div>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="phone" class="mb-2 text-sm font-semibold">Phone Number</label>
+                <label for="phone" class="mb-2 text-sm font-semibold"
+                    >Phone Number</label
+                >
                 <input
                     type="text"
                     id="phone"
                     formControlName="phone"
                     class="p-2 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 />
-                <div *ngIf="isPhoneInvalid('phone')" class="h-2 mb-5 relative left-2">
+                <div
+                    *ngIf="isPhoneInvalid('phone')"
+                    class="h-2 mb-5 relative left-2"
+                >
                     <small class="text-xs relative top-0 left-0 text-merlot-500"
                         >Please enter a valid phone number</small
                     >
                 </div>
             </div>
             <div class="flex flex-col mb-4">
-                <label for="message" class="mb-2 text-sm font-semibold">Your message *</label>
+                <label for="message" class="mb-2 text-sm font-semibold"
+                    >Your message *</label
+                >
                 <textarea
                     id="message"
                     formControlName="message"
                     class="p-2 min-h-32 h-[20vh] max-h-96 rounded-md border border-gray-600 bg-gray-950 text-slate-300 focus:outline-none focus:ring focus:ring-merlot-700"
                 ></textarea>
-                <div *ngIf="isFieldInvalid('message')" class="h-2 mb-5 relative left-2">
-                    <small class="text-xs relative top-0 left-0 text-merlot-500">Message is required</small>
+                <div
+                    *ngIf="isFieldInvalid('message')"
+                    class="h-2 mb-5 relative left-2"
+                >
+                    <small class="text-xs relative top-0 left-0 text-merlot-500"
+                        >Message is required</small
+                    >
                 </div>
             </div>
             <div class="flex justify-center">
@@ -62,7 +90,9 @@
                     Send
                 </button>
             </div>
-            <div class="text-slate-300 font-semibold text-center pt-4">{{ statusMessage }}</div>
+            <div class="text-slate-300 font-semibold text-center pt-4">
+                {{ statusMessage }}
+            </div>
         </div>
     </form>
 </div>

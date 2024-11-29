@@ -7,6 +7,8 @@ import { Tag } from '../models/tags';
     providedIn: 'root',
 })
 export class ProjectService {
+    //@Todo: convert this to a json file
+
     private projects: Project[] = [
         new Project(
             'Poker',
@@ -81,7 +83,14 @@ export class ProjectService {
             'https://github.com/nathanc8/focuspage',
             './assets/projects/focuspage-1.png',
             'Picture of a new tab affected by our extension, presenting a weather widget, a to-do list, a calendar, and a Google search bar',
-            [Tag.TYPESCRIPT, Tag.JAVASCRIPT, Tag.RESTAPI, Tag.CSS, Tag.HTML5, Tag.OOP],
+            [
+                Tag.TYPESCRIPT,
+                Tag.JAVASCRIPT,
+                Tag.RESTAPI,
+                Tag.CSS,
+                Tag.HTML5,
+                Tag.OOP,
+            ],
         )
             .withDevelopmentTime('Approximately 7 days')
             .withDescription([
@@ -137,7 +146,9 @@ export class ProjectService {
     }
 
     getProjectById(projectId: string): Project {
-        const foundProject = this.projects.find((Project) => Project.id === projectId);
+        const foundProject = this.projects.find(
+            (Project) => Project.id === projectId,
+        );
         console.log(foundProject);
         if (foundProject == null) {
             throw new Error('Project not found!');
