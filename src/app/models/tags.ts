@@ -1,5 +1,4 @@
 export class Tag {
-    // @Todo modifier les tags et éventuellement changer intégralement cette classe pour ajouter des images
     static readonly ANGULAR = new Tag('Angular', './assets/icons/angular.svg', 'Angular logo');
     static readonly JAVA = new Tag('Java', './assets/icons/java.svg', 'Java logo');
     static readonly PHP = new Tag('PHP', './assets/icons/php.svg', 'PHP logo');
