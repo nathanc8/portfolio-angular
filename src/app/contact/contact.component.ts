@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } 
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environment.dev';
 
 interface ContactForm {
     name: string;
@@ -44,12 +45,11 @@ export class ContactComponent implements OnInit {
 
     ngOnInit() {}
 
-    //
     public sendEmail() {
         if (this.form.valid) {
-            const serviceID = 'service_fok4lio';
-            const templateID = 'template_sfpc126';
-            const userID = 'nQzpLwYJzNxHi9Omw';
+            const serviceID = environment.emailServiceID;
+            const templateID = environment.emailTemplateID;
+            const userID = environment.emailUserID;
 
             emailjs
                 .send(
