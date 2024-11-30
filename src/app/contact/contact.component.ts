@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } 
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { environment } from '../env/env.dev';
+import { env } from '../env/env.dev';
 
 interface ContactForm {
     name: string;
@@ -43,14 +43,18 @@ export class ContactComponent implements OnInit {
         });
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        const serviceID = process.env['NG_APP_EMAIL_SERVICE_ID'];
+        const templateID = process.env['NG_APP_EMAIL_TEMPLATE_ID'];
+        const userID = process.env['NG_APP_EMAIL_USER_ID'];
+        console.log(serviceID, templateID, userID);
+    }
 
     public sendEmail() {
         if (this.form.valid) {
-            const serviceID = environment.emailServiceID;
-            const templateID = environment.emailTemplateID;
-            const userID = environment.emailUserID;
-
+            const serviceID = process.env['NG_APP_EMAIL_SERVICE_ID'];
+            const templateID = process.env['NG_APP_EMAIL_TEMPLATE_ID'];
+            const userID = process.env['NG_APP_EMAIL_USER_ID'];
             emailjs
                 .send(
                     serviceID!,
@@ -58,6 +62,7 @@ export class ContactComponent implements OnInit {
                     {
                         name: this.form.get('name')?.value,
                         email: this.form.get('email')?.value,
+                        phone: this.form.get('phone')?.value,
                         message: this.form.get('message')?.value,
                     },
                     userID,
@@ -69,7 +74,7 @@ export class ContactComponent implements OnInit {
                         this.form.reset();
                     },
                     (error) => {
-                        this.submitStatus = 'error';
+                        console.log(serviceID, templateID, userID), (this.submitStatus = 'error');
                         this.statusMessage =
                             '\u{274C} An error occurred. Please try again or choose another contact method.';
                     },
