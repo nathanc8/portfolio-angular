@@ -43,12 +43,7 @@ export class ContactComponent implements OnInit {
         });
     }
 
-    ngOnInit() {
-        const serviceID = process.env['NG_APP_EMAIL_SERVICE_ID'];
-        const templateID = process.env['NG_APP_EMAIL_TEMPLATE_ID'];
-        const userID = process.env['NG_APP_EMAIL_USER_ID'];
-        console.log(serviceID, templateID, userID);
-    }
+    ngOnInit() {}
 
     public sendEmail() {
         if (this.form.valid) {
