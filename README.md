@@ -2,6 +2,8 @@
 
 Welcome to my **personal portfolio** project built with [Angular](https://angular.io/)! I developed this project on personal time during my formation at Ada Tech School.
 
+I'm excited to say that it is available on [Vercel](https://portfolio-angular-cazard-nathan.vercel.app/)!
+
 ---
 
 ## 🚀 Features
@@ -18,6 +20,7 @@ Welcome to my **personal portfolio** project built with [Angular](https://angula
 - **Frontend**: [Angular](https://angular.io/)
 - **Styling**: [Tailwind](https://tailwindcss.com/) for modular and customized styles.
 - **External API** [EmailJS](https://www.emailjs.com/) for handling email submissions via the contact form.
+- **Deployment** [Vercel](https://vercel.com/home)
 
 ---
 
