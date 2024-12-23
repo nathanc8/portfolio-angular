@@ -1,27 +1,45 @@
-# PortfolioAngularCazard
+# Personal Portfolio 🌟
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+Welcome to my **personal portfolio** project built with [Angular](https://angular.io/)! I developed this project on personal time during my formation at Ada Tech School.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Features
 
-## Code scaffolding
+- **Dynamic Homepage**: Clear and concise presentation of my profile.
+- **Projects Section**: List of my projects with descriptions, images, and links to repositories or live demos.
+- **Contact Section**: Fully functional contact form with validation.
+- **Responsive Design**: Adaptive layout for an optimal experience on mobile, tablet, and desktop.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🛠️ Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Frontend**: [Angular](https://angular.io/)
+- **Styling**: [Tailwind](https://tailwindcss.com/) for modular and customized styles.
+- **External API** [EmailJS](https://www.emailjs.com/) for handling email submissions via the contact form.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📂 Project Structure
 
-## Running end-to-end tests
+```plaintext
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── components/      # Reusable components
+│   │   ├── services/        # Angular services for instanciation of the projects
+│   │   └── app.module.ts    # Angular main module
+│   ├── assets/              # Images, icons, static files
+├── angular.json             # Angular CLI configuration
+├── package.json             # Dependencies and npm scripts
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 📝 To-dos and ameliorations I want to implement
 
-## Further help
+- **Implement a backend** where projects would be initialized and stocked. This means creating a API so the frontend would fetch the data from the backend.
+- **About me section** needs to be done. But my updated resume is available on the home page!
+- **Multilingual support**
+- **Unit Testing** : write unit tests for importants components using Jasmine and Karma
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
