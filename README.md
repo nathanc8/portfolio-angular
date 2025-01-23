@@ -40,9 +40,11 @@ portfolio/
 
 ## 📝 To-dos and ameliorations I want to implement
 
-- **Implement a backend** where projects would be initialized and stocked. This means creating a API so the frontend would fetch the data from the backend.
-- **About me section** needs to be done. But my updated resume is available on the home page!
+- **Implement a backend** where projects would be initialized and stocked. This means creating a database, and an API so the frontend would fetch the data from the backend.
+- **Privacy policy**
+- **About me section** needs to be finished. But my updated resume is available on the home page!
+- **Polishing CSS** : I've identified some responsive anomalies that I have to adress, and some basics rules that my portfolio doesn't respect, as not having too long lines (or else it's not enjoyable to read on a big screen).
 - **Multilingual support**
-- **Unit Testing** : write unit tests for importants components using Jasmine and Karma
+- **Unit Testing** : write unit tests for importants components using Jasmine and Karma.
 
 
