@@ -1,4 +1,4 @@
-# Personal Portfolio 🌟
+# Personal Portfolio
 
 Welcome to my **personal portfolio** project built with [Angular](https://angular.io/)! I developed this project on personal time during my formation at Ada Tech School.
 
