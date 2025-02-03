@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from '../models/project';
+import { Project } from '../../models/project';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 

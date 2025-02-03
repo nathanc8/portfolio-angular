@@ -50,7 +50,12 @@
             }
             <div class="flex justify-center flex-wrap col-span-2 row-start-4 row-span-2 items-center">
                 @for (tag of project.tags; track $index) {
-                    <img class="max-w-14 m-2 lg:max-w-20" [src]="tag.image" [alt]="tag.tagAlt" [title]="tag.tagAlt" />
+                    <img
+                        class="max-h-12 max-w-12 m-2 lg:max-w-18 lg:max-h-18"
+                        [src]="tag.image"
+                        [alt]="tag.tagAlt"
+                        [title]="tag.tagAlt"
+                    />
                 }
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LinktreeComponent } from '../linktree/linktree.component';
+import { LinktreeComponent } from '../../components/linktree/linktree.component';
 import { Title } from '@angular/platform-browser';
 import { TitleCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';

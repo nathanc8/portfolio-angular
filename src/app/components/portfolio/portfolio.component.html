@@ -1,0 +1,13 @@
+<div
+    class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-10 w-full min-h-[90vh] bg-gray-950 text-slate-300 pb-2"
+>
+    @for (project of projects; track $index) {
+        <div class="">
+            <app-project-card
+                [project]="project"
+                class="flex items-center justify-center"
+                [id]="'single-project-' + project.id"
+            ></app-project-card>
+        </div>
+    }
+</div>

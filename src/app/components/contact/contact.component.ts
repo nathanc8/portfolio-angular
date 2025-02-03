@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } 
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { env } from '../env/env.dev';
-
 interface ContactForm {
     name: string;
     email: string;

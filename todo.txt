@@ -1,0 +1,32 @@
+Voir comment mettre un environnement de production et un environnement de développement :
+    --> Solution de contournement : faire une branche "dev" à partir de main, et à partir de cette branche, faire d'autres branche que je pourrais merge sur dev
+
+Intégrer des mentions légales :
+    - Nouvelle route en front
+    - Générateur de mentions légales en ligne
+    - Beaucoup de mise en forme
+
+Couleur de la police du footer
+
+Lignes : maximum 600px de largeur, à vérifier
+
+Logo Java à vérifier : peut-être trop grand, voir si on peut contraindre également la taille en hauteur, et pas seulement pas en largeur
+
+Voir pour des transitions
+
+Faire un back : 
+    - Intégrer les identifiants emailsjs dans le back et les cacher
+    - ORM pour générer la BDD
+    - Routes API
+    - Se connecter aux endpoints avec le front
+    - Modifier le project-service en fonction
+
+Revoir l'architecture du front
+
+Implémenter des tests sur certains composants qui sont les plus importants : 
+    - Contact
+    - Home
+    - Linktree
+    - Portfolio
+    - Project card
+    - Single project page

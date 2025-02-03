@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Project } from '../models/project';
+import { Project } from '../../models/project';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectService } from '../services/projects.service';
+import { ProjectService } from '../../services/projects.service';
 import { LowerCasePipe, UpperCasePipe } from '@angular/common';
-import { ProjectType } from '../models/project-type.enum';
+import { ProjectType } from '../../models/project-type.enum';
 import { Title } from '@angular/platform-browser';
 
 @Component({
